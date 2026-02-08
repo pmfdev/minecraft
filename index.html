@@ -1,0 +1,52 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Minecraft Sencillo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div>
+        <h1>Minecraft Sencillo</h1>
+        <p>Construye, elimina y explora un mundo 2D.</p>
+      </div>
+      <div class="stats">
+        <div><span>Bloques</span><strong id="block-count">0</strong></div>
+        <div><span>Modo</span><strong id="mode">Colocar</strong></div>
+      </div>
+    </header>
+
+    <section class="game">
+      <canvas id="world" width="900" height="540" aria-label="Mundo de bloques"></canvas>
+      <aside class="hud">
+        <div class="hint">
+          <strong>Controles</strong>
+          <ul>
+            <li>Clic izq: colocar</li>
+            <li>Clic der: eliminar</li>
+            <li>1-6: elegir bloque</li>
+            <li>Espacio: modo</li>
+            <li>R: regenerar</li>
+          </ul>
+        </div>
+        <div class="mini">
+          <strong>Semilla</strong>
+          <p id="seed">-</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="toolbar" id="toolbar"></section>
+
+    <section class="actions">
+      <button id="regen">Regenerar mundo</button>
+      <button id="clear">Limpiar construcción</button>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
